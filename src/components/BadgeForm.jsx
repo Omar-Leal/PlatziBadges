@@ -2,22 +2,26 @@ import React from 'react';
 
 class BadgeForm extends React.Component {
   handleChange = (e) => {
-    console.log({ 
-      name: e.target.name,
-      value: e.target.value 
-    });
+    // console.log({ 
+    //   name: e.target.name,
+    //   value: e.target.value 
+    // });
+
+    this.setState({
+      firstName: e.target.value,    
+    })
   };
 
   handleClick = (e) => {
     console.log(
       "Button actived"
     )
-  }
+  };
 
   handleSubmit = e => {
     e.preventDefault();
     console.log('Form was delivered');
-  }
+  };
 
   render(){
     return (
@@ -28,7 +32,29 @@ class BadgeForm extends React.Component {
               <label>First name</label>
               <input onChange={this.handleChange} className="form-control" type="text" name="first-name"/>
             </div>
+
+            <div className="form-group">
+              <label>Last name</label>
+              <input onChange={this.handleChange} className="form-control" type="text" name="first-name"/>
+            </div>
+
+            <div className="form-group">
+              <label>Email:</label>
+              <input onChange={this.handleChange} className="form-control" type="text" name="first-name"/>
+            </div>
+
+            <div className="form-group">
+              <label>Job Title</label>
+              <input onChange={this.handleChange} className="form-control" type="text" name="first-name"/>
+            </div>
+
+            <div className="form-group">
+              <label>Twitter</label>
+              <input onChange={this.handleChange} className="form-control" type="text" name="first-name"/>
+            </div>
+
             <button  onClick={this.handleClick} className="btn btn-primary">Send it!</button>
+            
           </form>
       </section>
     )
