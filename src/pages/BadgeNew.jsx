@@ -36,12 +36,8 @@ class BadgeNew extends React.Component {
 
             </div>
           </div>
-      </section>
-                             
-
-
-
-  
+      </section>                          
+ 
     )
   }
 }

@@ -10,7 +10,7 @@ class Badge extends React.Component {
     const {
       name,
       lastName,
-      occupation,
+      occupation,      
       Twitter
     } = this.props;
 
