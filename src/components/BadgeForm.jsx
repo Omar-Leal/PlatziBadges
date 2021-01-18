@@ -1,23 +1,8 @@
 import React from 'react';
 
 class BadgeForm extends React.Component {
-  state = {
-    name: '',
-    lastName: '',
-    email: '',
-    occupation: '',
-    Twitter: ''
-   };
-  handleChange = (e) => {
-    // console.log({ 
-    //   name: e.target.name,
-    //   value: e.target.value 
-    // });
-
-    this.setState({
-      [e.target.name]: e.target.value,    
-    })
-  };
+  state = {};
+ 
 
   handleClick = (e) => {
     console.log(
@@ -37,29 +22,31 @@ class BadgeForm extends React.Component {
         <h1>New Attend</h1>
           <form onSubmit={this.handleSubmit} >
             <div className="form-group">
-              <label>First name</label>
+              <label>
+                First name
+              </label>
               <input 
-                onChange={this.handleChange} 
+                onChange={this.props.onChange} 
                 className="form-control" 
                 type="text"
                 name="name" 
                 value={this.state.name} />              
-            </div>
+              </div>
 
             <div className="form-group" >
               <label>Last name</label>
               <input 
-                onChange={this.handleChange} 
+                onChange={this.props.onChange} 
                 className="form-control"
                 type="text"
                 name="lastName" 
-                value={this.state.lastName} />
+                value={this.state.lastName}/>
             </div>
 
             <div className="form-group">
               <label>Email:</label>
               <input 
-                onChange={this.handleChange} 
+                onChange={this.props.onChange} 
                 className="form-control" 
                 type="text"
                 name="email" 
@@ -69,7 +56,7 @@ class BadgeForm extends React.Component {
             <div className="form-group">
               <label>Job Title</label>
               <input 
-                onChange={this.handleChange} 
+                onChange={this.props.onChange} 
                 className="form-control" 
                 type="text" 
                 name="occupation" 
@@ -78,7 +65,12 @@ class BadgeForm extends React.Component {
 
             <div className="form-group">
               <label>Twitter</label>
-              <input onChange={this.handleChange} className="form-control" type="text" name="Twitter" value={this.state.Twitter} />
+              <input 
+              onChange={this.props.onChange} 
+              className="form-control" 
+              type="text" 
+              name="Twitter" 
+              value={this.state.Twitter} />
             </div>
 
             <button  onClick={this.handleClick} className="btn btn-primary">Send it!</button>
