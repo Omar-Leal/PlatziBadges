@@ -45,6 +45,8 @@
 }
 
 .cards:hover {
+  border: 1px solid #9ceec8;
+  cursor: pointer;
   transform: scale(1.1);
   transition: 600ms all;
 }
@@ -61,8 +63,13 @@
   margin: 10px 0;
 }
 
+.cards p {
+  opacity: 0.4;
+  font-size: 11px;
+}
+
 .cards__preview {
-  background-color: #1c3643;
+  background: linear-gradient(to right, #0f2027, #203a43, #306175);
   color: #fff;
   padding: 30px;
   width: 400px;
@@ -85,11 +92,12 @@
 
 .card-info h6 {
   font-size: 10px;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .card-info h3 {
   opacity: 0.6;
+  font-weight: 600;
 }
 
 .btn {

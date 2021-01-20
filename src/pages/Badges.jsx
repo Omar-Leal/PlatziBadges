@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar.jsx';
-import Badge from '../components/badge.jsx';
+
 import BadgesList from '../components/BadgesList.jsx';
 
 
@@ -85,7 +85,7 @@ class Badges extends React.Component {
         <div className="Badges" >
           <div className="Badges__hero">
             <div className="Badges__container">
-              <img className="Badges_conf-logo" src={confLogo} />
+              <img className="Badges_conf-logo" src={confLogo} alt="logito" />
             </div>
           </div>
 
