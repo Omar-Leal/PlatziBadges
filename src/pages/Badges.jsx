@@ -16,7 +16,7 @@ class Badges extends React.Component {
           firstName: 'Freda',
           lastName: 'Grady',
           email: 'Leann_Berge@gmail.com',
-          jobTitle: 'Legacy Brand Director',
+          jobTitle: 'JavaScript FullStack',
           twitter: '@FredaGrady2',
           avatarUrl:
             'https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon',
@@ -38,6 +38,38 @@ class Badges extends React.Component {
           email: 'Ron61@hotmail.com',
           jobTitle: 'National Markets Officer',
           twitter: '@DaphneyTorphy96',
+          avatarUrl:
+            'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
+        },
+
+        {
+          id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
+          firstName: 'Raymond',
+          lastName: 'Reddintong',
+          email: 'Ron61@hotmail.com',
+          jobTitle: 'Front End Developer',
+          twitter: '@rayRedintong',
+          avatarUrl:
+            'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
+        },
+        {
+          id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
+          firstName: 'Elizabeth',
+          lastName: 'Keen',
+          email: 'Ron61@hotmail.com',
+          jobTitle: 'Backend Developer',
+          twitter: '@LizzyKeen',
+          avatarUrl:
+            'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
+        },
+
+        {
+          id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
+          firstName: 'Dembe',
+          lastName: 'Zumba',
+          email: 'Ron61@hotmail.com',
+          jobTitle: 'Python Developer',
+          twitter: '@DembeZumba_25',
           avatarUrl:
             'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
         },
