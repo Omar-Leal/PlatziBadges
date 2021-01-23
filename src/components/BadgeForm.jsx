@@ -22,55 +22,53 @@ class BadgeForm extends React.Component {
         <h1>New Attend</h1>
           <form onSubmit={this.handleSubmit} >
             <div className="form-group">
-              <label>
-                First name
-              </label>
-              <input 
-                onChange={this.props.onChange} 
-                className="form-control" 
-                type="text"
-                name="name" 
-                value={this.state.name} />              
-              </div>
+              <label>First name</label> 
+                <input 
+                  onChange={this.props.onChange} 
+                  className="form-control" 
+                  type="text"
+                  name="name" 
+                  value={this.state.name} />              
+            </div>
 
             <div className="form-group" >
               <label>Last name</label>
-              <input 
-                onChange={this.props.onChange} 
-                className="form-control"
-                type="text"
-                name="lastName" 
-                value={this.state.lastName}/>
+                <input 
+                  onChange={this.props.onChange} 
+                  className="form-control"
+                  type="text"
+                  name="lastName" 
+                  value={this.state.lastName}/>
             </div>
 
             <div className="form-group">
               <label>Email:</label>
-              <input 
-                onChange={this.props.onChange} 
-                className="form-control" 
-                type="text"
-                name="email" 
-                value={this.state.email} />
+                <input 
+                  onChange={this.props.onChange} 
+                  className="form-control" 
+                  type="text"
+                  name="email" 
+                  value={this.state.email} />
             </div>
 
             <div className="form-group">
               <label>Job Title</label>
-              <input 
-                onChange={this.props.onChange} 
-                className="form-control" 
-                type="text" 
-                name="occupation" 
-                value={this.state.occupation} />
+                <input 
+                  onChange={this.props.onChange} 
+                  className="form-control" 
+                  type="text" 
+                  name="occupation" 
+                  value={this.state.occupation} />
             </div>
 
             <div className="form-group">
               <label>Twitter</label>
-              <input 
-              onChange={this.props.onChange} 
-              className="form-control" 
-              type="text" 
-              name="Twitter" 
-              value={this.state.Twitter} />
+                <input 
+                  onChange={this.props.onChange} 
+                  className="form-control" 
+                  type="text" 
+                  name="Twitter" 
+                  value={this.state.Twitter} />
             </div>
 
             <button  onClick={this.handleClick} className="btn btn-primary">Send it!</button>

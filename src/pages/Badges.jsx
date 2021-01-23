@@ -1,86 +1,54 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Navbar from '../components/Navbar.jsx';
-
 import BadgesList from '../components/BadgesList.jsx';
+import api from '../api';
+import PageLoading from '../components/PageLoading';
 
 
 import '../components/styles/Badges.css';
-
 import confLogo from '../images/badge-header.svg';
+
+
 
 class Badges extends React.Component {
   state = {
-      data: [
-        {
-          id: '2de30c42-9deb-40fc-a41f-05e62b5939a7',
-          firstName: 'Freda',
-          lastName: 'Grady',
-          email: 'Leann_Berge@gmail.com',
-          jobTitle: 'JavaScript FullStack',
-          twitter: '@FredaGrady2',
-          avatarUrl:
-            'https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon',
-        },
-        {
-          id: 'd00d3614-101a-44ca-b6c2-0be075aeed3d',
-          firstName: 'Major',
-          lastName: 'Rodriguez',
-          email: 'Ilene66@hotmail.com',
-          jobTitle: 'Human Research Architect',
-          twitter: '@MajorRodriguez6',
-          avatarUrl:
-            'https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon',
-        },
-        {
-          id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
-          firstName: 'Daphney',
-          lastName: 'Torphy',
-          email: 'Ron61@hotmail.com',
-          jobTitle: 'National Markets Officer',
-          twitter: '@DaphneyTorphy96',
-          avatarUrl:
-            'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
-        },
+      loading: true,
+      error: null,
+      data: undefined,      
+  }; 
 
-        {
-          id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
-          firstName: 'Raymond',
-          lastName: 'Reddintong',
-          email: 'Ron61@hotmail.com',
-          jobTitle: 'Front End Developer',
-          twitter: '@rayRedintong',
-          avatarUrl:
-            'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
-        },
-        {
-          id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
-          firstName: 'Elizabeth',
-          lastName: 'Keen',
-          email: 'Ron61@hotmail.com',
-          jobTitle: 'Backend Developer',
-          twitter: '@LizzyKeen',
-          avatarUrl:
-            'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
-        },
+  componentDidMount() {
+    this.fetchData()
+  }
 
-        {
-          id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
-          firstName: 'Dembe',
-          lastName: 'Zumba',
-          email: 'Ron61@hotmail.com',
-          jobTitle: 'Python Developer',
-          twitter: '@DembeZumba_25',
-          avatarUrl:
-            'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
-        },
-      ],
-  };
+  fetchData = async () => {
+    this.setState({
+      loading: true,
+      error: null
+    })
 
+    try {
+      const data = await api.badges.list();
+        this.setState({
+          loading: false,
+          data: data
+        })
 
+    } catch (error) {
+        this.setState({
+          loading: false,
+          data: error
+        })
+    }
+  }
 
   render(){
+    if(this.state.loading === true) {
+      return <PageLoading />;
+    }
+
+
     return (
       <React.Fragment>
          

@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../components/styles/BadgesNew.css';
 
-import Navbar from '../components/Navbar.jsx';
+
 import Badge from '../components/badge.jsx'
 import BadgeForm from '../components/BadgeForm.jsx';
 
