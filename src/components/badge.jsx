@@ -1,38 +1,34 @@
 import React from 'react';
-import logo from '../images/badge-header.svg';
-import avatar from '../images/avatar.png';
+import confLogo from '../images/badge-header.svg';
+
 import './styles/Badge.css';
+import Gravatar from './Gravatar';
 
 
-
-class Badge extends React.Component {  
-   render(){
-    const {
-      name,
-      lastName,
-      occupation,
-      email,         
-      Twitter
-    } = this.props;
-
+class Badge extends React.Component {
+  render() {
     return (
       <div className="Badge">
-          <div className="Badge__header">
-              <img src={logo} alt="Logo de conferencia" />
-          </div>  
-          <div className="Badge__section-name">
-              <img className="Badge__avatar" src={avatar} alt="Avatar"/>
-              <h1>{name}<br/>{lastName}</h1>        
-          </div>
-          <div className="Badge__section-info">
-              <h3>{occupation}</h3>
-              <div>@{Twitter}</div>
-              <div>{email}</div>
-          </div>
+        <div className="Badge__header">
+          <img src={confLogo} alt="Logo de la conferencia" />
+        </div>
 
-          <div className="Badge__footer "></div>
+        <div className="Badge__section-name">
+          <Gravatar 
+          className="Badge__avatar" 
+          email={this.props.email} />
+          <h1>
+            {this.props.name} <br/> {this.props.lastName}
+          </h1>
+        </div>
 
-      </div>   
+        <div className="Badge__section-info">
+          <h3>{this.props.jobTitle}</h3>
+          <div>@{this.props.twitter}</div>
+        </div>
+
+        <div className="Badge__footer">#platziconf</div>
+      </div>
     );
   }
 }

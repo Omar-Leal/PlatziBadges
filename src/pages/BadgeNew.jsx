@@ -1,19 +1,21 @@
 import React from 'react';
 
 import '../components/styles/BadgesNew.css';
+import header from '../images/logo-conf.svg';
 
 
 import Badge from '../components/badge.jsx'
 import BadgeForm from '../components/BadgeForm.jsx';
 
-
-import header from '../images/badge-header.svg';
+import api from '../api';
 
 
 class BadgeNew extends React.Component {
-  state = { form: {
-
-  }};
+  state = { 
+    form: {
+      
+    },
+};
 
   handleChangle = e => {    
     this.setState({
@@ -26,29 +28,55 @@ class BadgeNew extends React.Component {
     })
   }
 
+  handleSubmit = async e => {
+    e.preventDefault()
+    this.setState({
+      loading: true,
+      error: null
+    })
+
+    try {
+      await api.badges.create(this.state.form) 
+      this.setState({
+        loading: false,
+        
+      })
+    } catch (error) {
+      this.setState({
+        loading: false,
+        error: error,
+
+      })
+    }
+
+  }
+
   render(){
     return(
-      <React.Fragment>
-        
-          <figure className="BadgeNew__hero">
-            <img className="img-fluid" src={header} alt="header"/>
-          </figure>
+      <React.Fragment>        
+        <div className="BadgeNew__hero">
+          <img className="BadgeNew__hero-image img-fluid" src={header} alt="header"/>
+        </div>
 
           <div className="container">
             <div className="row">
               <article className="col-6">
                 <Badge
-                 name={this.state.form.name}
-                 lastName={this.state.form.lastName}
-                 occupation={this.state.form.occupation}
-                 email={this.state.form.email}
-                 Twitter={this.state.form.Twitter}
+                 name={this.state.form.name || 'NAME'}
+                 lastName={this.state.form.lastName || 'LAST_NAME'}
+                 jobTitle={this.state.form.jobTitle || 'OCCUPATION'}
+                 email={this.state.form.email || 'EMAIL'}
+                 twitter={this.state.form.twitter || 'TWITTER'}
                  
                  />
               </article>
 
               <article className="col-6">
-                <BadgeForm onChange={this.handleChangle} />
+                <BadgeForm 
+                onChange={this.handleChangle}
+                onSubmit={this.handleSubmit}
+                formValues={this.state.form} 
+                />
               </article>
 
             </div>
