@@ -1,7 +1,7 @@
 import React from 'react'
 import reactDOM from 'react-dom'
 
-import '../components/styles/Modal.css'
+import './styles/Modal.css';
 
 
 function Modal (props) {
@@ -10,13 +10,15 @@ function Modal (props) {
   }
 
   return reactDOM.createPortal(
-    <div className="modal">
+    <div className="Modal">
       <div className="Modal__container">
-        <button className="Modal__close-button">X</button>
+        <button 
+        onClick={props.onClose}
+        className="Modal__close-button">X</button>
         {props.children}
       </div>
     </div>,
-    document.getElementById('modal')    
+    document.getElementById('mod')    
     );
 }
 

@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 
-import Badge from '../components/badge';
-import Modal from '../components/Modal';
+import Badge from '../components/badge'
+import DeleteBadgeModal from '../components/DeleteBadgeModal'
 
-import '../components/styles/BadgeDetails.css';
-import confLogo from '../images/platziconf-logo.svg';
-
+import '../components/styles/BadgeDetails.css'
+import confLogo from '../images/platziconf-logo.svg'
 
 
 
@@ -48,8 +47,14 @@ function BadgeDetails (props) {
                   </Link>
                 </div>
                  <div>                   
-                    <button  className="btn btn-danger">Delete</button>  
-                    <Modal isOpen={true}> Lorem Ipsum </Modal>
+                    <button onClick={props.onOpenModal}  className="btn btn-danger">Delete</button>  
+                    <DeleteBadgeModal 
+                    onClose={props.onCloseModal}
+                    isOpen={props.modalIsOpen}
+                    onDeleteBadge={props.onDeleteBadge}
+                    
+                    /> 
+                   
                  </div> 
 
               
