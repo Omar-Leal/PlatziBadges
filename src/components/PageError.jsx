@@ -4,7 +4,7 @@ import './styles/PageError.css';
 
 function PageError (props) {
 
-  return <di className="PageError">{props.error.message}</di>;
+  return <div className="PageError">{props.error.message}</div>;
 }
 
 export default PageError;

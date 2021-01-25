@@ -3,7 +3,7 @@ import React from 'react';
 import Badge from '../components/badge.jsx'
 import BadgeForm from '../components/BadgeForm.jsx';
 import api from '../api';
-import PageLoading from '../components/PageLoading.jsx';
+
 
 import '../components/styles/BadgeEdit.css';
 import header from '../images/logo-conf.svg';
