@@ -2,6 +2,7 @@
   width: 100%;
   padding: 0.5rem 0;
   background-color: #1c3643;
+  margin-right: 1rem;
 }
 
 .Navbar__brand {
@@ -16,7 +17,7 @@
 }
 
 .Navbar__brand-logo {
-  margin-right: 0.5rem;
+  margin-left: 3rem;
 }
 
 @media screen and (max-width: 480px) {
