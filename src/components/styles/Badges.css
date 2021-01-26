@@ -27,6 +27,7 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 1rem;
+  margin-right: 28%;
 }
 
 .Badges__card-container {
@@ -112,3 +113,9 @@
 
   letter-spacing: 1px;
 } */
+
+@media screen and (max-width: 480px) {
+  .Badges__buttons {
+    margin-right: 28%;
+  }
+}

@@ -3,9 +3,7 @@
   min-height: calc(100vh - 60px);
   background: url("../../images/stars.svg"), #1b1b25;
   background-repeat: repeat;
-
   color: #ffffff;
-
   display: flex;
   align-items: center;
 }
@@ -20,5 +18,17 @@
 @media screen and (min-width: 768px) {
   .Home__col {
     align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Home__title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .Home img {
+    height: 100px;
   }
 }

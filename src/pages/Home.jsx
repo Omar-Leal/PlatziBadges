@@ -19,7 +19,7 @@ class Home extends Component {
                 className="img-fluid mb-2"
               />
 
-              <h1>Badge Management System</h1>
+              <h1 className="Home__title">Badge Management System</h1>
               <Link className="btn btn-primary" to="/badges">
                 Start
               </Link>

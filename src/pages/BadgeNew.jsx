@@ -74,7 +74,7 @@ class BadgeNew extends React.Component {
         </div>
 
           <div className="container">
-            <div className="row">
+            <div className="BadgeNew__container">
               <article className="col-6">
                 <Badge
                  name={this.state.form.name || 'NAME'}

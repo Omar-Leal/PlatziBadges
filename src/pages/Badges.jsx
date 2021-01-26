@@ -12,7 +12,6 @@ import '../components/styles/Badges.css';
 import confLogo from '../images/badge-header.svg';
 
 
-
 class Badges extends React.Component {
   state = {
       loading: true,
@@ -75,7 +74,8 @@ class Badges extends React.Component {
 
           <div className="Badge__container">
             <div className="Badges__buttons">
-                <Link to="/badges/new" className="btn btn-primary">New Badges!</Link>
+                <Link to="/badges/new" className="btn btn-primary">New Badges!
+                </Link>
             </div>
 
             <div className="Badges__list">
