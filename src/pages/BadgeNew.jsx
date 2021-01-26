@@ -87,7 +87,7 @@ class BadgeNew extends React.Component {
               </article>
 
               <article className="col-6">
-                <h1>New Attendant</h1>
+                <h1 className="form__title">Place your info here</h1>
                 <BadgeForm 
                 onChange={this.handleChangle}
                 onSubmit={this.handleSubmit}
