@@ -11,12 +11,12 @@ class BadgesListItem extends React.Component {
        <Gravatar
            className="Badge__avatar-list"
            email={this.props.badge.email}
-            alt={this.props.badge.name}
+            alt={this.props.badge.firstName}
         />
 
         <div>
           <strong>
-            {this.props.badge.name} {this.props.badge.lastName}
+            {this.props.badge.firstName} {this.props.badge.lastName}
           </strong>
           <br />@{this.props.badge.twitter}
           <br />

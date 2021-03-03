@@ -6,6 +6,7 @@ import api from '../api';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import MiniLoader from '../components/MiniLoader';
+import API from '../data/db.json'
 
 
 import '../components/styles/Badges.css';
@@ -38,7 +39,7 @@ class Badges extends React.Component {
     })
 
     try {
-      const data = await api.badges.list();
+      const data = await API.badges;
         this.setState({
           loading: false,
           data: data

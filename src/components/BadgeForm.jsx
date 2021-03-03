@@ -22,7 +22,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="name"
-              value={this.props.formValues.name}
+              value={this.props.formValues.firstName}
             />
           </div>
 
